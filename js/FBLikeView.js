@@ -21,12 +21,11 @@
  */
 'use strict';
 
-import PropTypes from 'prop-types';
-import React from 'react';
+import React, { PropTypes } from 'react';
 import {
   requireNativeComponent,
   StyleSheet,
-  ViewPropTypes,
+  View,
 } from 'react-native';
 
 import type { ObjectIdAndType } from './models/FBObjectIdAndType';
@@ -94,7 +93,7 @@ class LikeView extends React.Component {
 /* $FlowFixMe(>=0.43.0) - Remove this comment to see errors found when Flow
  * v0.43.0 was deployed */
 LikeView.propTypes = {
-  ...ViewPropTypes,
+  ...View.propTypes,
   objectIdAndType: PropTypes.object.isRequired,
   likeViewStyle: PropTypes.oneOf(['standard', 'button', 'box_count']),
   auxiliaryViewPosition: PropTypes.oneOf(['top', 'bottom', 'inline']),
